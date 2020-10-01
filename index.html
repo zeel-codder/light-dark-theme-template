@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+   <title>Light and Dark Mode Page</title>
+</head>
+<body>
+   <section>
+      <div class="toggle-btn">
+         <i class="fas fa-adjust"></i>
+      </div>
+      <div class="container">
+         <div class="content">
+            <div class="content-image">
+               <img src="img/img.jpg" alt="Forest Landscape Picture">
+            </div>
+            <div class="content-text">
+               <h1 class="title">The Forest</h1>
+               <h2 class="subtitle">It's a jungle out there</h2>
+               <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias similique et, fugiat est aut culpa expedita provident doloribus quas vero laboriosam consequatur facere error in. Consequatur cumque illo fugiat exercitationem?</p>
+               <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, nihil vitae! Blanditiis, nemo repellat repellendus beatae id adipisci corporis pariatur explicabo officia. Dolore eum labore perspiciatis. Corporis esse quam minus quae quasi temporibus architecto! Eligendi molestias id quas excepturi sit!</p>
+               <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem autem voluptate debitis tempora accusantium. Voluptatibus aperiam esse fugiat beatae ipsam perspiciatis enim, pariatur magni dolorem modi odio, labore, delectus dolorum doloribus est incidunt! Vero, quam eveniet est, ad quos mollitia, voluptas non eaque consequuntur quia atque? Iusto itaque numquam voluptatem!</p>
+               <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas.</p>
+               <a href="#" class="cta">Learn More &rarr;</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <script>
+      let body = document.body;
+      let toggleBtn = document.querySelector('.toggle-btn');
+      let currentTheme = localStorage.getItem('currentTheme');
+
+      if(currentTheme) {
+         body.classList.add('dark-theme');
+      }
+
+      toggleBtn.addEventListener('click', () => {
+         body.classList.toggle('dark-theme');
+
+         if(body.classList.contains('dark-theme')){
+            localStorage.setItem('currentTheme', 'activeTheme');
+         } else {
+            localStorage.removeItem('currentTheme');
+         }
+      })
+   </script>
+</body>
+</html>
