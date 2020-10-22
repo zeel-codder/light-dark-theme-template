@@ -118,3 +118,35 @@ section {
    padding: 1rem 2.5rem;
    margin-top: 2.5rem;
 }
+
+@media screen and (max-width: 1400px) {
+   
+}
+
+@media screen and (max-width: 760px) {
+   .content {
+      flex-direction: column;
+      padding: 3rem 1.5rem;
+      
+   }
+
+   div.content {
+      margin: 75rem 2rem 10rem 2rem;
+   }
+
+   .content-text {
+      display: blockx;
+   }
+}
+
+
+@media screen and (max-width: 550px) {
+   /* .cta {
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid var(--body-color);
+      color: var(--body-color);
+      padding: 1rem 2.5rem;
+      margin-top: 2.5rem;
+   } */
+}
